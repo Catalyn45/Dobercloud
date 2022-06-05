@@ -1,0 +1,28 @@
+{
+  "name": "dobercloud",
+  "version": "1.0.0",
+  "description": "Dobermann cloud service",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon main.js",
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Catalyn45/Dobercloud.git"
+  },
+  "author": "Catalin Ancutei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Catalyn45/Dobercloud/issues"
+  },
+  "homepage": "https://github.com/Catalyn45/Dobercloud#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
