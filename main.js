@@ -24,6 +24,20 @@ app.get('/scripts', (req, res) => {
     res.json({error: 'script type not found'})
 })
 
+app.get('/profiling_patterns', (req, res) => {
+    let params = req.query;
+    if (params.type === 'tcp') {
+        return res.json(repository.get_tcp_patterns());
+    }
+
+    if (params.type === 'udp') {
+        return res.json(repository.get_udp_patterns());
+    }
+
+    res.status(404)
+    res.json({error: 'pattern type not found'})
+})
+
 app.listen(config.PORT, "127.0.0.1", () => {
     logger.info(`Example app listening on port ${config.PORT}!`);
 })
